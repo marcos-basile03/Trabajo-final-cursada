@@ -1,0 +1,48 @@
+/* src/components/ChatListItem.css */
+
+.chat-list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chat-list-item:hover {
+  background-color: #2a2a2a; /* Cambio de color al pasar el mouse */
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Para que sea circular */
+  margin-right: 15px;
+  object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+  border: 2px solid #555;
+}
+
+.chat-info {
+  flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+.player-name {
+  margin: 0;
+  font-size: 1.1em;
+  color: #f0f0f0;
+}
+
+.last-message {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  color: #b0b0b0;
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  overflow: hidden; /* Oculta el texto que se desborda */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
+}
+
+.message-time {
+  font-size: 0.8em;
+  color: #888;
+  margin-left: 10px;
+}

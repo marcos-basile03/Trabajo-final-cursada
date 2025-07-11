@@ -1,0 +1,45 @@
+/* src/styles/ChatWindow.css */
+
+.chat-window-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ocupa toda la altura disponible del main-content */
+}
+
+.chat-window-container.no-chat-selected {
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 1.2em;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1e1e1e; /* Fondo del header del chat */
+  border-bottom: 1px solid #333;
+}
+
+.chat-header-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #555;
+}
+
+.chat-header h3 {
+  margin: 0;
+  color: #f0f0f0;
+  font-size: 1.2em;
+}
+
+.messages-container {
+  flex-grow: 1; /* Ocupa todo el espacio disponible entre el header y el input */
+  padding: 20px;
+  overflow-y: auto; /* Permite scroll en los mensajes */
+  display: flex;
+  flex-direction: column; /* Para que los mensajes aparezcan de arriba a abajo */
+}

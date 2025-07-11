@@ -1,0 +1,44 @@
+/* src/styles/MessageInput.css */
+
+.message-input-container {
+  display: flex;
+  padding: 10px 20px;
+  background-color: #1e1e1e; /* Fondo del área de input */
+  border-top: 1px solid #333;
+  align-items: center;
+}
+
+.message-input {
+  flex-grow: 1; /* Ocupa la mayor parte del espacio */
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 1px solid #555;
+  background-color: #262d31;
+  color: #f0f0f0;
+  font-size: 1em;
+  outline: none; /* Quita el contorno al hacer focus */
+}
+
+.message-input::placeholder {
+  color: #888;
+}
+
+.send-button {
+  background-color: #075e54; /* Color del botón de enviar */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Botón circular */
+  width: 45px;
+  height: 45px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.2em; /* Puedes poner un icono aquí o solo el texto */
+  transition: background-color 0.2s ease;
+}
+
+.send-button:hover {
+  background-color: #054a41;
+}

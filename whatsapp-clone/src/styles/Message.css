@@ -1,0 +1,37 @@
+/* src/styles/Message.css */
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 18px;
+  margin-bottom: 10px;
+  position: relative;
+  word-wrap: break-word; /* Para que el texto largo se rompa */
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.my-message {
+  background-color: #075e54; /* Color para mis mensajes (verde WhatsApp) */
+  align-self: flex-end; /* Alinea a la derecha */
+  color: #fff;
+}
+
+.other-message {
+  background-color: #262d31; /* Color para mensajes de otros (gris oscuro) */
+  align-self: flex-start; /* Alinea a la izquierda */
+  color: #f0f0f0;
+}
+
+.message-time {
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.6); /* Color más tenue para la hora */
+  margin-top: 5px;
+  display: block; /* Para que aparezca debajo del texto */
+  text-align: right; /* Alinea la hora a la derecha dentro de la burbuja */
+}
+
+/* Ajustes para la hora en mensajes del otro */
+.other-message .message-time {
+  color: rgba(255, 255, 255, 0.6);
+}

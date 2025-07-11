@@ -1,0 +1,15 @@
+/* src/components/ChatList.css */
+
+.chat-list-container h2 {
+  padding: 15px;
+  margin: 0;
+  border-bottom: 1px solid #333;
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.chat-items {
+  overflow-y: auto; /* Permite scroll si hay muchos jugadores */
+  height: calc(100% - 60px); /* Ajusta la altura para que el h2 no se mueva */
+}
