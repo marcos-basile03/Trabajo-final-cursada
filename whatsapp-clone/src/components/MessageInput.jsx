@@ -1,19 +1,25 @@
-
 import React, { useState } from 'react';
-import '../styles/MessageInput.css'; 
-
-
+import { useParams } from 'react-router-dom';
+import { useChat } from '../context/ChatContext';
+import '../styles/MessageInput.css';
 
 function MessageInput() {
   const [messageText, setMessageText] = useState('');
-
+  const { playerId } = useParams();
+  const { sendMessage } = useChat();
 
   const handleSendMessage = (e) => {
     e.preventDefault();
 
     if (messageText.trim()) {
+      const newMessage = {
+        id: Date.now(),
+        sender: 'me',
+        text: messageText,
+        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      };
 
-      console.log("Mensaje enviado (solo en consola por ahora):", messageText); 
+      sendMessage(playerId, newMessage);
       setMessageText('');
     }
   };
