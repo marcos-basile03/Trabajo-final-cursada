@@ -61,49 +61,116 @@ html {
 
 @media (max-width: 768px) {
   .app-container {
-    flex-direction: column;
+    flex-direction: column; 
   }
+
 
   .sidebar {
-    width: 100%;
-    height: auto;
+    width: 100%; 
+    height: 100%; 
     border-right: none;
-    border-bottom: 1px solid #333;
-  }
-
-  .chat-list-container h2 {
-    font-size: 1.1em;
+    border-bottom: none;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 10; 
   }
 
   .main-content {
-    flex-grow: 1;
-    height: 100%;
+    width: 100%; 
+    height: 100%; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 20; 
   }
 
+
+  .sidebar.hidden {
+    transform: translateX(-100%); 
+    opacity: 0; 
+    pointer-events: none; 
+  }
+
+  .main-content.hidden {
+    transform: translateX(100%); 
+    opacity: 0; 
+    pointer-events: none; 
+  }
+
+  .main-content.visible {
+    transform: translateX(0); 
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+  .chat-list-container h2 {
+    font-size: 1.2em; 
+    padding: 15px; 
+  }
+
+  .chat-list-item {
+    padding: 12px 15px;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .player-name {
+    font-size: 1.1em;
+  }
+
+  .last-message {
+    font-size: 0.9em;
+  }
+
+  .message-time {
+    font-size: 0.8em;
+  }
+
+ 
   .chat-header h3 {
-    font-size: 1em;
+    font-size: 1.1em;
   }
 
   .chat-header-avatar {
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .chat-header .back-button {
+    display: block; 
+  }
+
+  .message-input-container {
+    padding: 10px; 
   }
 
   .message-input {
-    font-size: 0.95em;
-    padding: 8px 12px;
+    font-size: 1em;
+    padding: 10px 15px;
   }
 
   .send-button {
-    width: 40px;
-    height: 40px;
-    font-size: 1em;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
   }
 }
 
 @media (max-width: 480px) {
+
+  .chat-list-container h2 {
+    font-size: 1.1em;
+    padding: 12px;
+  }
+
   .chat-list-item {
-    padding: 10px;
+    padding: 10px 12px;
   }
 
   .avatar {
@@ -124,10 +191,22 @@ html {
   }
 
   .chat-header h3 {
-    font-size: 0.95em;
+    font-size: 1em;
   }
 
-  .chat-window-container {
-    padding-bottom: 60px;
+  .chat-header-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .message-input {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+
+  .send-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
   }
 }
