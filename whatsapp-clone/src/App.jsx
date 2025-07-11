@@ -1,15 +1,15 @@
-// src/App.jsx
-import React from 'react'; // Asegúrate de que solo importes React si no usas otros hooks
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // No necesitamos useLocation por ahora
-import './styles/App.css'; // Asegúrate de que la ruta sea './styles/App.css'
 
-import ChatList from './components/ChatList';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './styles/App.css'; 
+
+import ChatList from './components/ChatList'; 
 import ChatWindow from './components/ChatWindow';
 
 function App() {
   return (
-    <Router> {/* Asegúrate de que Router envuelva todo */}
-      <div className="app-container"> {/* Volvemos a la estructura original de dos columnas */}
+    <Router>
+      <div className="app-container">
         <div className="sidebar">
           <ChatList />
         </div>

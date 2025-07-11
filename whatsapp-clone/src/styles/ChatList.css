@@ -1,4 +1,4 @@
-/* src/components/ChatList.css */
+
 
 .chat-list-container h2 {
   padding: 15px;
@@ -10,6 +10,6 @@
 }
 
 .chat-items {
-  overflow-y: auto; /* Permite scroll si hay muchos jugadores */
-  height: calc(100% - 60px); /* Ajusta la altura para que el h2 no se mueva */
+  overflow-y: auto; 
+  height: calc(100% - 60px); 
 }

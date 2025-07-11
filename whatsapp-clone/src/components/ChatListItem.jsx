@@ -1,13 +1,12 @@
-// src/components/ChatListItem.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/ChatListItem.css'; // Crearemos este archivo para los estilos
+import '../styles/ChatListItem.css'; 
 
 function ChatListItem({ player }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/chat/${player.id}`); // Navegamos a la URL del jugador
+    navigate(`/chat/${player.id}`); 
   };
 
   return (

@@ -1,9 +1,8 @@
-// src/components/Message.jsx
 import React from 'react';
-import '../styles/Message.css'; // Estilos para los mensajes
+import '../styles/Message.css'; 
 
 function Message({ message }) {
-  // La clase CSS dependerá de si el mensaje es 'me' (mío) o 'other' (del otro)
+
   const messageClass = message.sender === 'me' ? 'my-message' : 'other-message';
 
   return (

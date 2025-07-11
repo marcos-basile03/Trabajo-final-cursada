@@ -1,10 +1,9 @@
-// src/data/playersData.js
 
 export const playersData = [
   {
     id: 'messi',
     name: 'Lionel Messi',
-    avatar: 'https://via.placeholder.com/50/f0f0f0/808080?text=LM', // URL de una imagen de Messi
+    avatar: 'https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/MESSI.jpg', 
     lastMessage: 'Nos vemos en el próximo partido.',
     lastMessageTime: '18:30',
     messages: [
@@ -18,7 +17,7 @@ export const playersData = [
   {
     id: 'cristiano',
     name: 'Cristiano Ronaldo',
-    avatar: 'https://via.placeholder.com/50/f0f0f0/808080?text=CR', // URL de una imagen de CR7
+    avatar: 'https://img.a.transfermarkt.technology/portrait/header/8198-1748102259.jpg?lm=1',
     lastMessage: 'Siuuuu! 💪',
     lastMessageTime: 'Ayer',
     messages: [
@@ -31,7 +30,7 @@ export const playersData = [
   {
     id: 'mbappe',
     name: 'Kylian Mbappé',
-    avatar: 'https://via.placeholder.com/50/f0f0f0/808080?text=KM', // URL de una imagen de Mbappé
+    avatar: 'https://www.shutterstock.com/editorial/image-editorial/MbTeM15eM6D0U6x0MzU5MDg=/kylian-mbappe-smiles-during-public-training-paris-550nw-13782526bd.jpg', 
     lastMessage: 'A seguir sumando!',
     lastMessageTime: 'Lunes',
     messages: [
@@ -43,7 +42,7 @@ export const playersData = [
   {
     id: 'maradona',
     name: 'Diego Maradona',
-    avatar: 'https://via.placeholder.com/50/f0f0f0/808080?text=DM', // URL de una imagen de Maradona
+    avatar: 'https://hips.hearstapps.com/hmg-prod/images/muere-maradona-1606326764.jpg', 
     lastMessage: 'La mano de Dios presente siempre.',
     lastMessageTime: '01/07/2025',
     messages: [
@@ -51,19 +50,6 @@ export const playersData = [
         { id: 2, sender: 'me', text: 'Gracias, che! El fútbol es mi vida.', time: '11:05' },
         { id: 3, sender: 'other', text: 'Un genio inigualable.', time: '11:10' },
         { id: 4, sender: 'me', text: 'La mano de Dios presente siempre.', time: '01/07/2025' },
-    ],
-  },
-  {
-    id: 'pele',
-    name: 'Pelé',
-    avatar: 'https://via.placeholder.com/50/f0f0f0/808080?text=PE', // URL de una imagen de Pelé
-    lastMessage: 'Obrigado!',
-    lastMessageTime: '30/06/2025',
-    messages: [
-        { id: 1, sender: 'other', text: 'Rey Pelé, ¿cómo estás?', time: '15:00' },
-        { id: 2, sender: 'me', text: 'Muy bien, gracias a Dios. Disfrutando del fútbol.', time: '15:05' },
-        { id: 3, sender: 'other', text: 'Un placer hablar con la leyenda.', time: '15:10' },
-        { id: 4, sender: 'me', text: 'Obrigado!', time: '30/06/2025' },
     ],
   },
 ];

@@ -1,30 +1,30 @@
-/* src/styles/App.css */
+
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #282c34; /* Gris oscuro para el body */
-  color: #f0f0f0; /* Texto claro */
+  background-color: #282c34; 
+  color: #f0f0f0; 
 }
 
 .app-container {
-  display: flex; /* ESENCIAL para las dos columnas */
-  height: 100vh; /* Ocupa toda la altura de la ventana */
-  /* No necesita position: relative ni nada más aquí por ahora */
+  display: flex; 
+  height: 100vh; 
+ 
 }
 
 .sidebar {
-  width: 300px; /* Ancho fijo para la barra lateral */
-  background-color: #1e1e1e; /* Fondo un poco más oscuro para la sidebar */
+  width: 300px; 
+  background-color: #1e1e1e; 
   border-right: 1px solid #333;
-  overflow-y: auto; /* Para que se pueda hacer scroll si hay muchos chats */
-  flex-shrink: 0; /* Evita que se comprima */
-  /* Elimina las propiedades de transform y z-index si las agregaste para responsive */
+  overflow-y: auto; 
+  flex-shrink: 0; 
+ 
 }
 
 .main-content {
-  flex-grow: 1; /* Ocupa el resto del espacio */
-  background-color: #282c34; /* Fondo del chat (igual que el body para el área principal) */
+  flex-grow: 1; 
+  background-color: #282c34; 
   display: flex;
   flex-direction: column;
 }
@@ -35,31 +35,28 @@ body {
   color: #aaa;
 }
 
-/* Estilos para la barra de scroll */
-/* WebKit browsers (Chrome, Safari) */
+
 ::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de scroll */
-  height: 8px; /* Altura si es horizontal */
+  width: 8px; 
+  height: 8px; 
 }
 
 ::-webkit-scrollbar-track {
-  background: #202020; /* Fondo de la pista de la barra de scroll */
+  background: #202020; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #555; /* Color del "pulgar" de la barra de scroll */
-  border-radius: 4px; /* Bordes redondeados */
-  border: 2px solid #202020; /* Borde alrededor del pulgar */
+  background-color: #555; 
+  border-radius: 4px; 
+  border: 2px solid #202020; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #777; /* Color al pasar el ratón */
+  background-color: #777; 
 }
 
-/* Firefox */
+
 html {
-  scrollbar-color: #555 #202020; /* Color del pulgar y de la pista */
-  scrollbar-width: thin; /* Ancho de la barra de scroll */
+  scrollbar-color: #555 #202020; 
+  scrollbar-width: thin; 
 }
-
-/* ELIMINA TODAS LAS REGLAS DE MEDIA QUERIES Y EL BOTÓN DE TOGGLE DE AQUÍ */

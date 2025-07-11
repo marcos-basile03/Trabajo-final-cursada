@@ -1,9 +1,9 @@
-/* src/styles/ChatWindow.css */
+
 
 .chat-window-container {
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ocupa toda la altura disponible del main-content */
+  height: 100%; 
 }
 
 .chat-window-container.no-chat-selected {
@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   padding: 15px 20px;
-  background-color: #1e1e1e; /* Fondo del header del chat */
+  background-color: #1e1e1e; 
   border-bottom: 1px solid #333;
 }
 
@@ -37,9 +37,28 @@
 }
 
 .messages-container {
-  flex-grow: 1; /* Ocupa todo el espacio disponible entre el header y el input */
+  flex-grow: 1; 
   padding: 20px;
-  overflow-y: auto; /* Permite scroll en los mensajes */
+  overflow-y: auto; 
   display: flex;
-  flex-direction: column; /* Para que los mensajes aparezcan de arriba a abajo */
+  flex-direction: column; 
+}
+
+
+.back-button {
+  background: none;
+  border: none;
+  color: #f0f0f0; 
+  font-size: 1.8em; 
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 0;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  line-height: 1; 
+}
+
+.back-button:hover {
+  color: #075e54;
 }
