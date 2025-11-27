@@ -6,6 +6,8 @@ function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const API_BASE_URL = import.meta.env.VITE_API_URL;
+    const API_LOGIN_URL = `${API_BASE_URL}/login`;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,8 +18,7 @@ function LoginPage() {
         }
 
         try {
-            const API_URL = "https://whatsapp-clone-api-x7gh.onrender.com";
-            const response = await fetch(`${API_URL}/api/login`, {
+            const response = await fetch(`${API_LOGIN_URL}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
