@@ -1,15 +1,118 @@
-
-
-.chat-list-container h2 {
-  padding: 15px;
-  margin: 0;
-  border-bottom: 1px solid #333;
-  color: #fff;
-  font-size: 1.3em;
-  text-align: center;
+/* Estilos Globales */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.chat-items {
-  overflow-y: auto; 
-  height: calc(100% - 60px); 
+/* Estilos de Layout de 2 Columnas (WhatsApp) */
+.app-container {
+    display: flex;
+    height: 100vh; /* Altura de la vista completa */
+    width: 100vw;
+    overflow: hidden; 
+    background-color: #f0f2f5;
+}
+
+.sidebar {
+    width: 30%; /* Barra lateral para la lista de chats */
+    min-width: 320px;
+    max-width: 450px;
+    border-right: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column; /* Agregado para que el header y la lista se apilen */
+    overflow: hidden; /* Controla el scroll de la sidebar */
+}
+
+/* Encabezado dentro de la sidebar (ej: 'Chats') */
+.sidebar-header {
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #41525d;
+    background-color: #f7f7f7;
+    flex-shrink: 0; /* Asegura que el header no se encoja */
+}
+
+/* Contenedor de la lista de chats con scroll */
+.chat-list-scroll {
+    flex-grow: 1; /* Ocupa todo el espacio restante */
+    overflow-y: auto; /* Permite scroll solo en la lista de chats */
+}
+
+.main-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+    background-color: #f0f2f5; 
+    display: flex; /* Para centrar el placeholder */
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-text {
+    color: #667781;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* --- ESTILOS DE LOS ITEMS DE CHAT --- */
+.chat-item {
+    padding: 15px 12px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.chat-item:hover {
+    background-color: #f5f6f6;
+}
+
+.chat-item.active {
+    background-color: #ebebeb; /* Color para el chat seleccionado */
+}
+
+.chat-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.chat-name {
+    font-weight: bold;
+    color: #41525d;
+    font-size: 1em;
+}
+
+.chat-last-message {
+    color: #667781;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 2px;
+}
+
+/* --- SOLUCIÓN PARA CENTRAR LOGIN Y REGISTRO --- */
+/* (Mantenemos los estilos de auth-card-container y auth-card aquí) */
+.auth-card-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.auth-card {
+    width: 90%;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

@@ -1,7 +1,7 @@
-
 export const playersData = [
   {
-    id: 'messi',
+    // ID debe ser el ID de MongoDB (o el ID de chat válido)
+    id: '65d1d86f7f6f1a4e1e8b4567', 
     name: 'Lionel Messi',
     avatar: 'https://fcb-abj-pre.s3.amazonaws.com/img/jugadors/MESSI.jpg', 
     lastMessage: 'Nos vemos en el próximo partido.',
@@ -15,7 +15,8 @@ export const playersData = [
     ],
   },
   {
-    id: 'cristiano',
+    // ID ficticio, por favor, reemplaza con el ID de tu DB
+    id: '65d1d86f7f6f1a4e1e8b4568', 
     name: 'Cristiano Ronaldo',
     avatar: 'https://img.a.transfermarkt.technology/portrait/header/8198-1748102259.jpg?lm=1',
     lastMessage: 'Siuuuu! 💪',
@@ -28,7 +29,8 @@ export const playersData = [
     ],
   },
   {
-    id: 'mbappe',
+    // ID ficticio, por favor, reemplaza con el ID de tu DB
+    id: '65d1d86f7f6f1a4e1e8b4569', 
     name: 'Kylian Mbappé',
     avatar: 'https://www.shutterstock.com/editorial/image-editorial/MbTeM15eM6D0U6x0MzU5MDg=/kylian-mbappe-smiles-during-public-training-paris-550nw-13782526bd.jpg', 
     lastMessage: 'A seguir sumando!',
@@ -40,7 +42,8 @@ export const playersData = [
     ],
   },
   {
-    id: 'maradona',
+    // ID ficticio, por favor, reemplaza con el ID de tu DB
+    id: '65d1d86f7f6f1a4e1e8b4570', 
     name: 'Diego Maradona',
     avatar: 'https://hips.hearstapps.com/hmg-prod/images/muere-maradona-1606326764.jpg', 
     lastMessage: 'La mano de Dios presente siempre.',

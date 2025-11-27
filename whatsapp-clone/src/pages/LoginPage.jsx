@@ -1,76 +1,88 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    
     const navigate = useNavigate();
-    const API_BASE_URL = import.meta.env.VITE_API_URL;
-
+    const { login } = useAuth(); 
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setError('');
 
         if (!email || !password) {
-            alert("Ambos campos son obligatorios.");
+            setError("Ambos campos son obligatorios.");
             return;
         }
 
-        try {
-            const response = await fetch(`${API_BASE_URL}/login`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password })
-            });
+        const result = await login(email, password);
 
-            const data = await response.json();
-
-            if (response.ok) {
-                localStorage.setItem('token', data.token);
-                navigate('/chat');
-            } else {
-                alert(data.msg || 'Credenciales inválidas.');
-            }
-        } catch (error) {
-            alert('Error de conexión al servidor.');
+        if (result.ok) {
+            navigate('/'); // <<--- OK: esto SÍ debe estar
+        } else {
+            setError(result.msg || "Credenciales inválidas.");
         }
     };
 
     return (
-        <div style={{ padding: '20px', maxWidth: '400px', margin: '50px auto', border: '1px solid #ccc' }}>
-            <h2>Iniciar Sesión</h2>
+        <div style={{ padding: '20px', maxWidth: '400px', margin: '50px auto', border: '1px solid #ccc', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0,0,0,0.1)' }}>
+            <h2 style={{ textAlign: 'center', color: '#4CAF50' }}>Iniciar Sesión</h2>
+
+            {error && (
+                <p style={{ color: 'red', textAlign: 'center', padding: '10px', border: '1px solid red', borderRadius: '4px', marginBottom: '15px' }}>
+                    {error}
+                </p>
+            )}
+            
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="email">Email:</label>
+                    <label>Email:</label>
                     <input
                         type="email"
-                        id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '8px', margin: '5px 0' }}
+                        style={{ width: '100%', padding: '10px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '4px' }}
                     />
                 </div>
+
                 <div>
-                    <label htmlFor="password">Contraseña:</label>
+                    <label>Contraseña:</label>
                     <input
                         type="password"
-                        id="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         required
-                        style={{ width: '100%', padding: '8px', margin: '5px 0' }}
+                        style={{ width: '100%', padding: '10px', margin: '8px 0', border: '1px solid #ccc', borderRadius: '4px' }}
                     />
                 </div>
-                <button type="submit" style={{ padding: '10px 15px', backgroundColor: '#4CAF50', color: 'white', border: 'none', cursor: 'pointer' }}>
+
+                <button 
+                    type="submit"
+                    style={{
+                        width: '100%',
+                        padding: '10px 15px',
+                        backgroundColor: '#4CAF50',
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        marginTop: '15px'
+                    }}
+                >
                     Entrar
                 </button>
-                <p>¿No tienes cuenta? <a href="/register">Regístrate aquí</a></p>
+
+                <p style={{ textAlign: 'center', marginTop: '15px' }}>
+                    ¿No tienes cuenta? <a href="/register" style={{ color: '#4CAF50', textDecoration: 'none' }}>Regístrate aquí</a>
+                </p>
             </form>
         </div>
     );
 }
 
-export default LoginPage
-//...
+export default LoginPage;

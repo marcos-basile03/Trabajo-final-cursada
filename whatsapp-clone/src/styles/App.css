@@ -59,6 +59,23 @@ html {
   scrollbar-width: thin;
 }
 
+/* ... */
+
+.auth-card {
+    /* ... Tus estilos actuales (fondo blanco, borde, etc.) ... */
+    
+    /* SOLUCIÓN AL PROBLEMA DE CENTRADO Y MARGEN */
+    width: 90%; /* Ancho máximo en móviles */
+    max-width: 400px; /* Ancho máximo en desktop */
+    margin: 50px auto; /* Agrega margen superior/inferior y centra horizontalmente */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white; /* O el color de tu tarjeta */
+}
+
+/* ... */
+
 @media (max-width: 768px) {
   .app-container {
     flex-direction: column; 
