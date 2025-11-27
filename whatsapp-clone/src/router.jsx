@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import ChatPage from './pages/ChatPage';
 import LoginPage from './pages/LoginPage';
 import PrivateRoute from './components/PrivateRoutes';
+import RegisterPage from './pages/RegisterPage';
 
 export default function AppRouter() {
   return (
