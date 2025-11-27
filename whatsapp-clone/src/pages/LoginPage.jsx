@@ -7,7 +7,7 @@ function LoginPage() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
     const API_BASE_URL = import.meta.env.VITE_API_URL;
-    const API_LOGIN_URL = `${API_BASE_URL}/login`;
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -18,7 +18,7 @@ function LoginPage() {
         }
 
         try {
-            const response = await fetch(`${API_LOGIN_URL}/api/login`, {
+            const response = await fetch(`${API_BASE_URL}/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
