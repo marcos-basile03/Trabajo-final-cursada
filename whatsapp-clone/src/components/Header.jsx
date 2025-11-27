@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { useChat } from '../context/ChatContext';
-import '../styles/ChatHeader.css'; 
+import '../styles/ChatWindow.css';
 
 export default function ChatHeader() {
   const { id } = useParams();
@@ -9,7 +9,7 @@ export default function ChatHeader() {
 
   return (
     <div className="chat-header">
-      <img src={contact.image} alt={contact.name} className="chat-avatar" />
+      <img src={contact.image} alt={contact.name} className="chat-header-avatar" />
       <strong>{contact.name}</strong>
     </div>
   );
