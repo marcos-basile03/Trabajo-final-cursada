@@ -16,7 +16,8 @@ function LoginPage() {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/login', {
+            const API_URL = "https://whatsapp-clone-api-x7gh.onrender.com";
+            const response = await fetch(`${API_URL}/api/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -69,4 +70,6 @@ function LoginPage() {
         </div>
     );
 }
+
+export default LoginPage
 //...
