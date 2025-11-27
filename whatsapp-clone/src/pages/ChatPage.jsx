@@ -1,5 +1,5 @@
-import ChatHeader from '../components/ChatHeader';
 import ChatWindow from '../components/ChatWindow';
+import ChatHeader from '../components/Header';
 import MessageInput from '../components/MessageInput';
 import '../styles/ChatPage.css';
 
