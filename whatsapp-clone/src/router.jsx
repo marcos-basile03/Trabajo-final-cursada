@@ -2,9 +2,8 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'; 
 import HomePage from './pages/HomePage';
 import ChatPage from './pages/ChatPage';
-
-import LoginPage from './pages/Auth/LoginPage'; 
 import PrivateRoute from './components/PrivateRoute'; 
+import LoginPage from './pages/LoginPage';
 
 export default function AppRouter() {
   return (
